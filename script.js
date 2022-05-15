@@ -14,6 +14,7 @@ function computerPlay(){
 }
 
 function playRound(playerSelection, computerSelection){
+   
    if (playerSelection.toUpperCase() == computerSelection.toUpperCase())
    return decision = 'Tie!!';
    else if (playerSelection.toUpperCase() == 'ROCK' && computerSelection.toUpperCase()=='PAPER')
@@ -29,4 +30,15 @@ function playRound(playerSelection, computerSelection){
    else if (playerSelection.toUpperCase() == 'SCISSORS' && computerSelection.toUpperCase()=='PAPER')
    return decision = 'You Win! Scissors beats Paper';
 }
+
+function game(){
+   for (let i = 0; i < 5; i++) {
+      const computerSelection = computerPlay();
+      let playerSelection = prompt('Enter your choice: ');
+      console.log(playRound(playerSelection, computerSelection));
+   }
+}
+
+
+
 
